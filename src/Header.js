@@ -1,4 +1,5 @@
 import logo from './images/logo.svg';
+import { Link } from "react-router-dom";
 //import './styles/Header.css';
 
 function Header() {
@@ -9,13 +10,13 @@ function Header() {
 				<nav>
 					<ul id="menu">
 						<li>
-							<a href="/about">About us</a>
+							<Link to="/about">About us</Link>
 						</li>
 						<li>
-							<a href="/gallery">Gallery</a>
+							<Link to="/gallery">Gallery</Link>
 						</li>
 						<li>
-							<a href="/contacts">Contacts</a>
+							<Link to="/contacts">Contacts</Link>
 						</li>
 					</ul>
 				</nav>
