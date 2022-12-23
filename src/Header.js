@@ -7,7 +7,7 @@ function Header() {
 		<HashRouter basename="/">
 			<header className="App-header">
 				<div className="wrapper">
-					<a href="/"><img src={logo} className="logo" alt="logo" /></a>
+					<Link to="/"><img src={logo} className="logo" alt="logo" /></Link>
 					<nav>
 						<ul id="menu">
 							<li>
