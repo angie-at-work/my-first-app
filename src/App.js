@@ -5,35 +5,23 @@ import About from './About';
 import Gallery from './Gallery';
 import Contacts from './Contacts';
 import Footer from './Footer';
-import { BrowserRouter, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route } from "react-router-dom";
 import './styles/index.css';
 
 function App() {
 	return (		
-		<Router>
 			<div className="page-wrapper">
 				<HelmetProvider>
 					<Header />
-					<BrowserRouter basename="/my-first-app">
-						<Switch>
-							<Route path="/about">
-								<About />
-							</Route>
-							<Route path="/gallery">
-								<Gallery />
-							</Route>
-							<Route path="/contacts">
-								<Contacts />
-							</Route>
-							<Route path="/">
-								<Home />
-							</Route>
-						</Switch>
-					</BrowserRouter>
+						<HashRouter basename="/">
+							<Route exact path="/" component={Home} />
+							<Route exact path="/about" component={About} />
+							<Route exact path="/gallery" component={Gallery} />
+							<Route exact path="/contacts" component={Contacts} />
+						</HashRouter>
 					<Footer />
 				</HelmetProvider>
 			</div>
-		</Router>
 	);
 }
 
