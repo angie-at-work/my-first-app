@@ -16,9 +16,6 @@ function App() {
 					<Header />
 					<BrowserRouter basename="/my-first-app">
 						<Switch>
-							<Route exact path="/">
-								<Home />
-							</Route>
 							<Route path="/about">
 								<About />
 							</Route>
@@ -27,6 +24,9 @@ function App() {
 							</Route>
 							<Route path="/contacts">
 								<Contacts />
+							</Route>
+							<Route exact path="/">
+								<Home />
 							</Route>
 						</Switch>
 					</BrowserRouter>
